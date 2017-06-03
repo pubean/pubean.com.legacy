@@ -1,0 +1,24 @@
+<div class="section single">
+  <div class="container">
+    {{ if gt (div (sub now.Unix .Lastmod.Unix) 86400) 100 }}
+      <div class="notification">
+        <button class="delete"></button>
+        ⚠️  &nbsp;该篇文章由 <strong>@{{ .Params.author }}</strong> 最后更新于 <strong>{{ div (sub now.Unix .Lastmod.Unix) 86400 }}</strong> 天前，文中所描述的信息可能已经发生了变化，请读者谨慎参考或使用。
+      </div>
+    {{ end }}
+    <article class="content">
+      <h2 class="offscreen">📝 文章正文</h2>
+      {{ .Content }}
+    </article>
+    <aside class="box menu post-meta">
+      <h2 class="menu-label">🏷 分类和标签</h2>
+      <p class="tagcloud">
+          <a href="/category/{{ .Params.category | urlize }}"><span class="tag is-white">{{ .Params.category | upper }}</span></a>
+          {{ range $tag := .Params.tags }}
+            <a href="/tags/{{ $tag | urlize }}"><span class="tag is-white">{{ $tag | upper }}</span></a>
+          {{ end }}
+      </p>
+    </aside>
+    {{ partial "disqus.html" . }}
+  </div>
+</div>

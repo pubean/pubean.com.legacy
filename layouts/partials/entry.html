@@ -1,0 +1,18 @@
+<article class="card post">
+  <div class="card-content">
+    <div class="columns">
+      <div class="column{{ if isset .Params "thumbnail" }} is-three-quarters{{ end }}">
+        <h3 class="title is-4">{{ .Title }}</a></h3>
+        <p class="content summary">{{ .Summary | plainify }}</p>
+        <p class="read-more"><a href="{{ .Permalink }}"><small>查看全文 →</small></a></p>
+      </div>
+      {{ if isset .Params "thumbnail" }}
+        <div class="column is-one-quarters">
+          <figure class="image is-4by3">
+            <img src="{{ .Params.thumbnail }}" alt="{{ .Title }}">
+          </figure>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</article>

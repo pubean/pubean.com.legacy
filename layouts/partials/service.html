@@ -1,0 +1,34 @@
+<section class="section is-section is-service has-text-centered">
+  <div class="container">
+    <div class="heading">
+      <h2 class="title is-4">💖💯 我们的服务</h2>
+      <p class="description">What can we do for you?</p>
+    </div>
+    <div class="columns is-multiline">
+      {{ $type := .Type }}
+      {{ range (where .Data.Pages.ByWeight "Type" "service") }}
+        {{ if eq $type "service" }}
+          <div class="column is-2">
+            <figure class="image is-4by3">
+              <img src="{{ .Params.thumbnail }}">
+            </figure>
+          </div>
+          <div class="column is-4 has-text-left">
+            <h3 class="title is-5">{{ .Title }}</h3>
+            {{ .Content }}
+          </div>
+        {{ else }}
+          <div class="column is-2">
+            <figure class="image is-4by3">
+              <img src="{{ .Params.thumbnail }}">
+            </figure>
+          </div>
+          <div class="column is-4 has-text-left">
+            <p class="content summary">{{ .Summary | plainify }}</p>
+            <p class="read-more"><a href="/service/">查看详情 →</a></p>
+          </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>

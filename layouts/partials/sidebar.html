@@ -1,0 +1,20 @@
+<aside class="box menu categories">
+  <h2 class="menu-label">📁 文章分类</h2>
+  <ul class="menu-list">
+    {{ $term := .Data.Term }}
+      <li><a{{ if eq .URL "/post/" }} class="is-active"{{ end }} href="/post/">全部文章<small> ({{ add (len (where .Site.Pages "Type" "post")) -1 }})</small></a></li>
+    {{ range $category := .Site.Taxonomies.category.ByCount }}
+      <li><a{{ if eq $term $category.Name }} class="is-active"{{ end }} href="/category/{{ $category.Name | urlize }}">{{ $category.Name | upper }}<small> ({{ $category.Count }})</small></a></li>
+    {{ end }}
+  </ul>
+</aside>
+
+<aside class="box menu tagcloud">
+  <h2 class="menu-label">🏷 文章标签</h2>
+  <p class="tagcloud">
+    {{ $term := .Data.Term }}
+    {{ range $tag := (first 50 .Site.Taxonomies.tags.ByCount) }}
+      <a href="/tags/{{ $tag.Name | urlize }}"><span class="tag {{ if in $term $tag.Name }}is-success{{ else }}is-white{{ end }}">{{ $tag.Name | upper }} ({{ $tag.Count }})</span></a>
+    {{ end }}
+  </p>
+</aside>

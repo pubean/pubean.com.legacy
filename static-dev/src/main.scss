@@ -1,0 +1,266 @@
+@import '~bulma/bulma.sass';
+
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'), url('./fonts/SourceSansPro-ExtraLight.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+body {
+  line-height: 1.618;
+}
+
+a {
+  color: $green;
+}
+
+::selection {
+  color: $white;
+  background-color: $green;
+  opacity: .618;
+}
+
+.title {
+  font-family: 'Source Sans Pro', $family-sans-serif;
+}
+
+.offscreen {
+  position: absolute;
+  left: -1000rem;
+}
+
+.is-overlay {
+  background-color: $black;
+  opacity: .618;
+}
+
+.menu-list {
+  a {
+    &:hover {
+      color: $green;
+    }
+  }
+}
+
+.description {
+  opacity: .75;
+}
+
+.is-hide {
+  display: none;
+}
+
+#site-header {
+  position: relative;
+  background-color: $dark;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+
+  .brand {
+    &:before {
+      content:"";
+      display: inline-block;
+      width: 1.825rem;
+      height: 2rem;
+      vertical-align: bottom;
+      margin-right: 1rem;
+      background: transparent url('./images/logo.png') no-repeat center center;
+      background-size: 1.825rem 2rem;
+    }
+  }
+}
+
+#site-footer {
+  padding-bottom: 3rem;
+
+  .social-media {
+    margin-bottom: 3rem;
+  }
+
+  .copyright {
+    padding-top: 3rem;
+    border-top: 1px solid $grey-lighter;
+
+    a {
+      color: $grey-dark;
+    }
+  }
+}
+
+.is-section {
+  .heading {
+    margin-bottom: 2rem;
+
+    .title {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .content {
+    small {
+      opacity: .5;
+    }
+  }
+
+  .image {
+    img {
+      border-radius: $radius;
+    }
+  }
+}
+
+.is-works {
+  .is-overlay {
+    opacity: 0;
+    transition: opacity $speed $easing;
+    background-color: $white;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+
+  .card-content {
+    padding: 1rem 0;
+  }
+}
+
+.is-team {
+  .is-overlay {
+    opacity: 0;
+    transition: opacity $speed $easing;
+    background-color: $dark;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .card {
+    box-shadow: none;
+  }
+
+  .card-content {
+    padding: 1rem 1rem 1rem 0;
+  }
+}
+
+.is-contact {
+  position: relative;
+  background-color: $dark;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  code {
+    border-radius: $radius;
+    opacity: .5;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.posts {
+  .card {
+    box-shadow: none;
+    border-bottom: 1px solid $white-ter;
+  }
+
+  .card-content {
+    padding: 1.5rem 0;
+  }
+
+  .image {
+    img {
+      border-radius: $radius;
+    }
+  }
+
+  .pagination {
+    margin-top: 1.5rem;
+
+    .is-current {
+      background-color: $green;
+      border-color: $green;
+    }
+  }
+}
+
+.sidebar {
+  .categories {
+    a.is-active {
+      background-color: $green;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  .tagcloud {
+    line-height: 2;
+  }
+}
+
+.single {
+  .content {
+    img {
+      border-radius: $radius;
+    }
+  }
+
+  .post-meta {
+    margin-bottom: 3rem;
+  }
+
+  @media screen and (min-width: $desktop) {
+    .container {
+      max-width: 45rem;
+    }
+  }
+
+  @media screen and (min-width: $widescreen) {
+    .container {
+      max-width: 45rem;
+    }
+  }
+}
+
+.suspension {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 1000;
+
+  .button {
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem 0 0;
+    border: 1px solid $white-ter;
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, .1);
+    border-radius: 50%;
+  }
+}
+
+.error {
+  .error-text {
+    font-family: $family-monospace;
+  }
+}

@@ -1,0 +1,82 @@
+{{ if eq .Type "about" }}
+<section class="section is-section is-team has-text-centered">
+  <div class="container">
+    <div class="heading">
+      <h2 class="title is-4">🏢 我们的公司</h2>
+      <p class="description">Make things more interesting.</p>
+    </div>
+    <div class="columns is-mobile is-multiline has-text-left">
+      <div class="tile is-ancestor">
+        <div class="tile is-parent">
+          <article class="tile is-child notification">
+            <h3 class="title is-5">关于拍逗</h3>
+            <div class="content">
+              <p>南京拍逗信息技术有限公司（简称：拍逗科技），是一家创建于 2017 年的创业团队。我们的团队均由产品设计师和研发工程师组成，崇尚用技术改变世界，用体验征服客户。</p>
+              <p>作为一支研发型互联网公司，我们一方面自主研发和运营一些有趣的工具类型互联网产品，一方面也为客户提供从研发到运营的互联网+全流程的解决方案。</p>
+              <p>作为一家从南京出发的互联网公司，我们希望通过自己的努力走向世界，我们也希望能够影响甚至改变南京的互联网氛围，使其变得更加有趣，有活力。</p>
+              <p>- EOF -</p>
+            </div>
+          </article>
+        </div>
+        <div class="tile is-vertical is-8">
+          <div class="tile">
+            <div class="tile is-parent">
+              <article class="tile is-child notification has-text-centered">
+                <figure class="image is-square">
+                  <img src="./media/about/about.jpg">
+                </figure>
+              </article>
+            </div>
+            <div class="tile is-parent is-vertical">
+              <article class="tile is-child notification">
+                <h3 class="title is-5">价值观</h3>
+                <div class="content">
+                  <p>找有趣的人，做有趣的事</p>
+                  <p>自主的学习，自发的创造</p>
+                  <p>予人以玫瑰，手有有余香</p>
+                </div>
+              </article>
+              <article class="tile is-child notification">
+                <h3 class="title is-5">联系我们</h3>
+                <div class="content">
+                  <p><address>邮箱：<a href="mailto:hello@pubean.com">hello@pubean.com</a></address></p>
+                  <p><address>电话：<a href="tel:+8618651894953">186-5189-4953</a></address></p>
+                  <p><address>地址：<a href="https://j.map.baidu.com/aZ-hB">南京市鼓楼区新模范马路66号南邮大厦4楼</a></address></p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<section class="section is-section is-team has-text-centered">
+  <div class="container">
+    <div class="heading">
+      <h2 class="title is-4">👩‍🎨👨‍💻 我们的团队</h2>
+      <p class="description">100% zero bullshit, guaranteed.</p>
+    </div>
+    <div class="columns is-mobile is-multiline has-text-left">
+      {{ range first 6 (where .Data.Pages.ByWeight "Type" "about") }}
+        <div class="card column is-half-mobile">
+          <div class="card-image">
+            <figure class="image is-square">
+              <a href="{{ .Params.blog }}">
+                <img src="{{ .Params.avatar }}" alt="{{ .Title }}">
+                <div class="is-overlay" style="background-image: url('{{ .Params.hover }}');"></div>
+              </a>
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              {{ .Title }}<br><small>{{ .Params.role }}</small>
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

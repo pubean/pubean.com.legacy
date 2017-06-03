@@ -1,0 +1,20 @@
+<header id="site-header" class="hero is-dark is-bold is-medium has-text-centered" style="background-image: url('{{ .Params.thumbnail }}');">
+  <div class="is-overlay"></div>
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">{{ .Title }}</h1>
+      <p class="description">@{{ .Params.author }} · {{ .Date.Format "Jan 2" }} · {{ .ReadingTime }} min read</p>
+    </div>
+  </div>
+  <div class="hero-footer">
+    <div class="container">
+      <nav class="main-menu nav nav-center">
+        <h2 class="offscreen">🏠 全局导航</h2>
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+          <a class="nav-item{{ if eq .Identifier "post" }} is-active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+      </nav>
+    </div>
+  </div>
+</header>

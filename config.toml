@@ -1,0 +1,50 @@
+languageCode = "zh-Hans"
+baseURL = "https://pubean.com"
+title = "拍逗科技"
+disqusShortname = "pubean"
+googleAnalytics = "UA-99107869-1"
+
+[[menu.main]]
+  name = "首页"
+  weight = 10
+  identifier = "home"
+  url = "/"
+
+[[menu.main]]
+  name = "服务"
+  weight = 20
+  identifier = "service"
+  url = "/service/"
+
+[[menu.main]]
+  name = "作品"
+  weight = 30
+  identifier = "works"
+  url = "/works/"
+
+[[menu.main]]
+  name = "博客"
+  weight = 40
+  identifier = "post"
+  url = "/post/"
+
+[[menu.main]]
+  name = "关于"
+  weight = 50
+  identifier = "about"
+  url = "/about/"
+
+[taxonomies]
+  tag = "tags"
+  category = "category"
+
+[params]
+  author = "Ritchie Zhu"
+  description = "让一切更加有趣 🎉"
+  keywords = "WEB开发,开源,移动开发,微信开发,有趣"
+  shortTitle = "Pubean Inc."
+  themeColor = "#62c343"
+  googleSiteVerification = "AXeY2RWl9scrD4FvQ6eL2jIXa89mNHUHalWwSr9N_bs"
+  email = "hello@pubean.com"
+  icp = "苏ICP备16005986号-1"
+  paginate = 10

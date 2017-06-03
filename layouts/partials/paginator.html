@@ -1,0 +1,25 @@
+{{ $paginator := .Paginate (where .Data.Pages "Type" "post") (index .Site.Params "paginate") }}
+{{ if gt $paginator.TotalPages 1 }}
+<nav class="pagination is-centered">
+  <h3 class="offscreen">📎 文章分页导航</h3>
+  {{ if $paginator.HasPrev }}
+    <a class="pagination-previous" href="{{ $paginator.Prev.URL }}" title="更新的文章">← 上页</a>
+  {{ else }}
+    <a class="pagination-previous" title="没有更新的文章了" disabled>← 上页</a>
+  {{ end }}
+  {{ if $paginator.HasNext }}
+    <a class="pagination-next" href="{{ $paginator.Next.URL }}" title="更旧的文章">下页 →</a>
+  {{ else }}
+    <a class="pagination-next is-disabled" title="没有更旧的文章了" disabled>下页 →</a>
+  {{ end }}
+  <ul class="pagination-list">
+    {{ range $paginator.Pagers }}
+      {{ if eq .PageNumber $paginator.PageNumber }}
+        <li><a class="pagination-link is-current" title="当前页">{{ .PageNumber }}</a></li>
+      {{ else }}
+        <li><a class="pagination-link" href="{{ .URL }}" title="第 {{ .PageNumber }} 页">{{ .PageNumber }}</a></li>
+      {{ end }}
+    {{ end }}
+  </ul>
+</nav>
+{{ end }}

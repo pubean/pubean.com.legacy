@@ -1,0 +1,22 @@
+<header id="site-header" class="hero is-dark is-bold is-medium has-text-centered" style="background-image: url('./img/cover.5fac20da.jpg');">
+  <div class="is-overlay"></div>
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title"><a class="brand" href="/">{{ .Site.Title }}</a></h1>
+      <p class="description">{{ $.Param "description" }}</p>
+    </div>
+  </div>
+  <div class="hero-footer">
+    <div class="container">
+      <nav class="main-menu nav nav-center">
+        <h2 class="offscreen">🏠 全局导航</h2>
+        {{ $type := .Type }}
+        {{ $kind := .Kind }}
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+          <a class="nav-item{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} is-active{{ end }}{{ if and (eq .Identifier "post") (and (eq $type "page") (eq $kind "taxonomy"))}} is-active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+      </nav>
+    </div>
+  </div>
+</header>

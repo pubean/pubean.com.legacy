@@ -1,0 +1,24 @@
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-two-third posts">
+        {{ if eq .Data.Singular "tag" }}
+          <h2 class="menu-label">📚 标签 → {{ .Data.Term }}</h2>
+        {{ else if eq .Data.Singular "category" }}
+          <h2 class="menu-label">📚 分类 → {{ .Data.Term }}</h2>
+        {{ else }}
+          <h2 class="menu-label">📚 全部文章</h2>
+        {{ end }}
+        {{ $paginator := .Paginate (where .Data.Pages "Type" "post") (index .Site.Params "paginate") }}
+        {{ range $paginator.Pages.ByDate.Reverse }}
+          {{ partial "entry.html" . }}
+        {{ end }}
+        {{ partial "paginator.html" . }}
+      </div>
+      <div class="column is-one-third sidebar">
+        <h2 class="offscreen">🔖 右侧边栏</h2>
+        {{ partial "sidebar.html" . }}
+      </div>
+    </div>
+  </div>
+</section>

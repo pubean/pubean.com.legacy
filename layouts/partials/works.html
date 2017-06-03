@@ -1,0 +1,27 @@
+<section class="section is-section is-works has-text-centered">
+  <div class="container">
+    <div class="heading">
+      <h2 class="title is-4">🖥📱 我们的作品</h2>
+      <p class="description">What have we created?</p>
+    </div>
+    <div class="columns">
+      {{ range first 4 (where .Data.Pages.ByWeight "Type" "works") }}
+        <div class="column card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <a href="{{ .Params.link }}" title="{{ .Content }}">
+                <img src="{{ .Params.thumbnail }}" alt="{{ .Title }}">
+                <div class="is-overlay" style="background-image: url('{{ .Params.qrcode }}');"></div>
+              </a>
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              {{ .Title }}<br><small>{{ or .Params.form "未知类型" }} · {{ or .Params.customer "拍逗科技" }}</small>
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
