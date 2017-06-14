@@ -45,7 +45,7 @@ export default {
         use: {
           loader: 'url-loader',
           options: {
-            limit: 10000,
+            limit: 100,
             publicPath: '',
             name: 'img/[name].[hash:8].[ext]',
           },
@@ -56,7 +56,7 @@ export default {
         use: {
           loader: 'url-loader',
           options: {
-            limit: 10000,
+            limit: 100,
             publicPath: '../',
             name: 'fonts/[name].[hash:8].[ext]',
           },

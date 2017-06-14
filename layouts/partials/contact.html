@@ -3,7 +3,7 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title">💌 联系我们</h2>
-      <p class="title is-5"><a title="复制到 console 中运行"><code>atob("{{ $.Param "email" | base64Encode }}")</code></a></p>
+      <p class="title is-5"><code>mailto: {{ $.Param "email" }}</code></p>
     </div>
   </div>
 </section>

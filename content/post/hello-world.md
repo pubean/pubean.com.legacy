@@ -2,28 +2,33 @@
 title = "你好，世界！"
 author = "Ritchie"
 category = "团队故事"
-tags = ["Newbean"]
+tags = ["拍逗", "Pubean", "创业"]
 date = "2017-06-03T15:30:00+08:00"
 thumbnail = "./media/post/hello-world.png"
 +++
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat.
+![团队](./media/post/hello-world.jpg)
+
+**孟夏之日，万物并秀。**
+
+拍逗科技在 `2017年5月17日` 正式开张营业，三位联合创始人终于要搞事情了。作为一家由工程师创办的公司，我倡导技术优先的产品和服务理念，致力于用新技术提高生产力和改善生产关系。
 
 <!--more-->
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+> *特别鸣谢亿猫科技的 @徐总 和安信地板的 @rebecca 在公司注册中给予的巨大帮助。*
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+拍逗之名译自公司的英文名字 `Pubean Inc.`，拍逗 LOGO 是一颗「绿豆」构成的 `π` 形拟人形象，寓意数学、工程和无限的可能性，以绿色为主色，象征着年轻（心态而非年龄）和生机，中文名中 `逗` 字意为「有趣」，希望我们能够找到一群有趣之人一起做有趣的事情。
+
+拍逗的口号（SLOGAN）是：让一切更加有趣 Make things more interesting，其中 **make things** 指搞事情、折腾，代表了我们团队对于生活的态度是主动和有为的，**more interesting** 筛选了我们要选择怎样的人加入团队，将做怎样的事情。
+
+```python
+print('Hello World')
+```
+
+你好，世界！
+
+万事开头难，看来最难的已经过去了
+
+拍逗来了，让我们让世界更加有趣吧 🎉
+
+**-- EOF --**

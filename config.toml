@@ -23,12 +23,6 @@ googleAnalytics = "UA-99107869-1"
   url = "/works/"
 
 [[menu.main]]
-  name = "博客"
-  weight = 40
-  identifier = "post"
-  url = "/post/"
-
-[[menu.main]]
   name = "关于"
   weight = 50
   identifier = "about"

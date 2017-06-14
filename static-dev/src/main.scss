@@ -32,6 +32,10 @@ a {
   left: -1000rem;
 }
 
+.no-padding {
+  padding: 0;
+}
+
 .is-overlay {
   background-color: $black;
   opacity: .618;
