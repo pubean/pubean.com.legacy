@@ -3,7 +3,6 @@
 npm-debug.log
 yarn-error.log
 public
-static
 build
 node_modules
 !.gitignore
