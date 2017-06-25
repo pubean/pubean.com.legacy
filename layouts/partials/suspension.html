@@ -1,6 +1,9 @@
+{{ if and (eq .Type "works") (eq .Kind "page") }}
+{{ else }}
 <div class="suspension">
-  <button title="回到顶部" class="button is-outlined is-hide to-top"><span class="icon"><img src="./img/to-top.614b797e.svg" alt="回到顶部"></span></button>
+  <button title="回到顶部" class="button is-outlined is-hide to-top"><span class="icon"><img src="./build/img/to-top.614b797e.svg" alt="回到顶部"></span></button>
   {{ if and (eq .Type "post") (eq .Kind "page") }}
-  <button title="文章讨论区" class="button is-outlined to-disqus"><span class="icon"><img src="./img/to-disqus.1d706455.svg" alt="文章讨论区"></span></button>
+  <button title="文章讨论区" class="button is-outlined to-disqus"><span class="icon"><img src="./build/img/to-disqus.1d706455.svg" alt="文章讨论区"></span></button>
   {{ end }}
 </div>
+{{ end }}

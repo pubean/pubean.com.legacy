@@ -16,6 +16,8 @@
       {{ .Title | upper }} | {{ .Site.Title }}
     {{ else if and (eq .Type "post") (eq .Kind "page") }}
       {{ .Title }}
+    {{ else if and (eq .Type "works") (eq .Kind "page") }}
+      {{ .Title }}
     {{ else if eq .Kind "404" }}
       页面找不到 | {{ .Site.Title }}
     {{ end }}
@@ -24,7 +26,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
   <meta name="theme-color" content="{{ $.Param "themeColor" }}">
   <meta name="application-name" content="{{ $.Param "shortTitle" }}">
-  {{ if and (eq .Type "post") (eq .Kind "page") }}
+  {{ if eq .Kind "page" }}
   <meta name="author" content="{{ .Params.author }}">
   <meta name="description" content="{{ .Summary | plainify }}">
   <meta name='keywords' content="{{ range $index, $tag := .Params.tags }}{{ if $index }}, {{ end }}{{ $tag | upper }}{{ end }}">
@@ -46,21 +48,22 @@
   <meta name="msapplication-tooltip" content="{{ .Site.Title }}">
   <meta name='msapplication-navbutton-color' content="{{ $.Param "themeColor" }}">
   <meta name="msapplication-TileColor" content="{{ $.Param "themeColor" }}">
-  <meta name="msapplication-TileImage" content="./img/tile-image-windows.c2ea6acb.png">
-  <meta name="msapplication-square70x70logo" content="./img/tile-image-windows-small.4bb551e0.png">
-  <meta name="msapplication-square150x150logo" content="./img/tile-image-windows-medium.d01d41ac.png">
-  <meta name="msapplication-wide310x150logo" content="./img/tile-image-windows-wide.c07276fb.png">
-  <meta name="msapplication-square310x310logo" content="./img/tile-image-windows-large.e7ac935c.png">
-  <link rel="icon" href="./img/favicon.262d67e5.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.fc101cbb.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.5005d44a.png">
-  <link rel="icon" sizes="192x192" href="./img/touch-icon-android.6e3c7676.png">
-  <link rel="apple-touch-icon" href="./img/touch-icon-apple.3a25cdaa.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="./img/touch-icon-iphone.80599297.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="./img/touch-icon-ipad.497c6911.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="./img/touch-icon-iphone-retina.d6971c73.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="./img/touch-icon-ipad-retina.fc5cb2ab.png">
-  <link rel="mask-icon" href="./img/safari-pinned-tab.bdf9c69b.svg" color="{{ $.Param "themeColor" }}">
+  <meta name="msapplication-TileImage" content="./build/img/tile-image-windows.c2ea6acb.png">
+  <meta name="msapplication-square70x70logo" content="./build/img/tile-image-windows-small.4bb551e0.png">
+  <meta name="msapplication-square150x150logo" content="./build/img/tile-image-windows-medium.d01d41ac.png">
+  <meta name="msapplication-wide310x150logo" content="./build/img/tile-image-windows-wide.c07276fb.png">
+  <meta name="msapplication-square310x310logo" content="./build/img/tile-image-windows-large.e7ac935c.png">
+  <link rel="icon" href="./build/img/favicon.262d67e5.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="./build/img/favicon-16x16.fc101cbb.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./build/img/favicon-32x32.5005d44a.png">
+  <link rel="icon" sizes="192x192" href="./build/img/touch-icon-android.6e3c7676.png">
+  <link rel="apple-touch-icon" href="./build/img/touch-icon-apple.3a25cdaa.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./build/img/touch-icon-iphone.80599297.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./build/img/touch-icon-ipad.497c6911.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./build/img/touch-icon-iphone-retina.d6971c73.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./build/img/touch-icon-ipad-retina.fc5cb2ab.png">
+  <link rel="mask-icon" href="./build/img/safari-pinned-tab.bdf9c69b.svg" color="{{ $.Param "themeColor" }}">
   <link rel="canonical" href="{{ .Permalink }}">
-  <link rel="stylesheet" href="./css/main.f83489f4.css">
+  <link rel="stylesheet" href="//cdn.bootcss.com/fullPage.js/2.9.4/jquery.fullpage.min.css">
+  <link rel="stylesheet" href="./build/css/main.003cacf6.css">
 </head>

@@ -1,13 +1,15 @@
 +++
 title = "DiliCMS"
+layout = "opensource"
 form = "开源项目"
 customer = "拍逗科技"
-link = "https://github.com/chekun/dilicms"
+link = "/works/dilicms"
 thumbnail = "./media/works/dilicms.png"
-qrcode = "./media/works/dilicms-qrcode.png"
+logo = "./media/works/dilicms-logo.png"
+qrcode = "./media/works/dilicms.png"
 date = "2017-05-08T19:23:55+08:00"
 weight = 10
 +++
 
-DiliCMS 是一个基于 `CodeIgniter` 的快速开发内容管理系统。
+一个基于 CodeIgniter 的快速开发内容管理系统
 

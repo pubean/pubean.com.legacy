@@ -1,8 +1,0 @@
-.DS_Store
-.eslintcache
-yarn-error.log
-node_modules/
-build/
-src/styles/sprite.css
-src/images/sprite.png
-!.gitignore
