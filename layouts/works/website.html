@@ -1,1 +1,43 @@
-页面建设中（网站案例）
+{{ define "main" }}
+  <div id="fullpage" style="color: #fff;">
+    <div class="section active has-text-centered" id="section0">
+      <img width="256 " height="256" src="{{ .Params.logo }}">
+      <div class="content" style="padding-top: 2rem; color: #fff;">{{ .Content }}</div>
+      <div id="supportedBy">
+        <div>Supported by:</div>
+        <a href="https://pubean.com">
+          <img src="./media/works/supportedby.png" width="130" height="31" alt="Pubean Inc." />
+        </a>
+      </div>
+    </div>
+
+    <div class="section has-text-centered" id="section1">
+      <img width="256" src="./media/works/phofo-01.png">
+      <div class="content" style="padding-top: 2rem; color: #fff;">
+        <p>照片原图云端永远保存</p>
+        <p>Keep raw photo in cloud.</p>
+      </div>
+    </div>
+
+    <div class="section has-text-centered" id="section2">
+      <img width="256" src="./media/works/phofo-02.png">
+      <div class="content" style="padding-top: 2rem; color: #fff;">
+        <p>跨平台可访问，响应式照片格式</p>
+        <p>All platform responsive format.</p>
+      </div>
+    </div>
+
+    <div class="section has-text-centered" id="section3">
+      <img width="256" src="./media/works/phofo-03.png">
+      <div class="content" style="padding-top: 2rem; color: #666;">
+        <p>随时随地，轻松上传</p>
+        <p>Easy upload anywhere & anytime.</p>
+      </div>
+    </div>
+
+    <div class="section has-text-centered" id="section4">
+      <img width="256 " height="256" src="{{ .Params.logo }}">
+      <p style="padding: 2rem"><a class="button is-medium is-danger is-inverted is-outlined" href="https://phofo.pubean.com">马上体验</a></p>
+    </div>
+  </div>
+{{ end }}

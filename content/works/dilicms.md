@@ -7,6 +7,8 @@ link = "/works/dilicms"
 thumbnail = "./media/works/dilicms.png"
 logo = "./media/works/dilicms-logo.png"
 qrcode = "./media/works/dilicms.png"
+sectionsColor = ["#C6E9CB"]
+anchors = ["firstPage"]
 date = "2017-05-08T19:23:55+08:00"
 weight = 10
 +++

@@ -1,15 +1,15 @@
 <script src="./build/js/vendor.b5de082a.js"></script>
 <script src="./build/js/main.003cacf6.js"></script>
-<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 <script src="//cdn.bootcss.com/fullPage.js/2.9.4/jquery.fullpage.min.js"></script>
 <script>
   // 全屏案例
   $(document).ready(function () {
     $('#fullpage').fullpage({
-      sectionsColor: ['#C6E9CB', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-      anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+      sectionsColor: {{ .Params.sectionsColor }},
+      anchors: {{ .Params.anchors }},
       menu: '#menu',
       css3: true,
+      navigation: true,
       scrollingSpeed: 1000
     });
   });

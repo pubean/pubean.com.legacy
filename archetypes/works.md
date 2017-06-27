@@ -1,5 +1,6 @@
 +++
 customer = ""
+layout = ""
 form = ""
 link = ""
 thumbnail = ""
